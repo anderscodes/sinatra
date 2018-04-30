@@ -16,6 +16,13 @@ get '/hellomoto' do
   "im a phone"
 end
 
-get '/cat' do
+get '/random-cannon' do
+  @array = ["Amigo", "Oscar", "Viking"].sample
+  erb(:index)
+end
+
+get '/named-cannon' do
+  p params
+  @array = params[:name]
   erb(:index)
 end
