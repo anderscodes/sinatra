@@ -21,8 +21,13 @@ get '/random-cannon' do
   erb(:index)
 end
 
-get '/named-cannon' do
-  p params
+post '/named-cannon' do
   @array = params[:name]
   erb(:index)
+end
+
+get '/form-cannon' do
+  p params
+  @array = params[:name]
+  erb(:form)
 end
