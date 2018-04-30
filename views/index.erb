@@ -10,3 +10,13 @@
 
 <img class="cat" src="https://img-new.cgtrader.com/items/690670/4b036df6d1/large/antique-cannon-ship-cannon-pirate-cannon-3d-model-fbx.jpg">
 <h1>My name is  <%=@array %></h1>
+
+<% if params[:name] == nil %>
+<form action="/named-cannon" method="get">
+  <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          <input type="submit" value="submit">
+      </div>
+</form>
+<% end %>
